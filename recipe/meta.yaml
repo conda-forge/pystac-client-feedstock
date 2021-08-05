@@ -1,5 +1,5 @@
 {% set name = "pystac-client" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pystac-client-{{ version }}.tar.gz
-  sha256: b39b7d318e7e1372d47336737fa19a5c6ce2c4ab2dd97153ad18c73a48e07111
+  sha256: ced097021f7a702288648f5c7318a98f682f713c8611f25013c30c9c4e8626c5
 
 build:
   number: 0
@@ -23,14 +23,13 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pystac >=0.5.6,<0.6
+    - pystac >=1.1.0,<1.1.1
     - python-dateutil >=2.7.0
-    - requests ~=2.25.1
+    - requests >=2.25.1,<2.25.2
 
 test:
   imports:
     - pystac_client
-    - pystac_client.extensions
   commands:
     - pip check
     - stac-client --help
