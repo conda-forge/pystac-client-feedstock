@@ -19,13 +19,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - pystac ~=1.1.0
-    - python-dateutil >=2.7.0
+    - python >=3.7
+    - pystac ~=1.2.0
     - requests ~=2.25
+    # - python-dateutil >=2.7.0
 
 test:
   imports:
