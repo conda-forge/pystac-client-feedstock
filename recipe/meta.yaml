@@ -23,8 +23,9 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - pystac ~=1.2.0
-    - requests ~=2.25
+    - pystac >=1.4.0
+    - python-dateutil >=2.7.0
+    - requests >=2.25
 
 test:
   imports:
