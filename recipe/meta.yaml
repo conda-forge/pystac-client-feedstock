@@ -1,5 +1,5 @@
 {% set name = "pystac-client" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pystac-client-{{ version }}.tar.gz
-  sha256: f585bd9bcd52ee399c8a292dbb7e0405c0da359a73bc07c1ef82a65c17124d94
+  sha256: 05b07df0071f144c3e93831b2e7c68e4c88e8cf92d02dc908f97c021e7c1f716
 
 build:
   number: 0
