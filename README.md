@@ -1,11 +1,11 @@
-About pystac-client
-===================
+About pystac-client-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pystac-client-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/stac-utils/pystac-client.git
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pystac-client-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python library for working with Spatiotemporal Asset Catalog (STAC).
 
