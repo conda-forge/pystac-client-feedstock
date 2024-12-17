@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "pystac-client" %}
 {% set version = "0.8.5" %}
 
@@ -7,23 +8,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 7fba8d4f3c641ff7e840084fc3a53c96443a227f8a5889ae500fc38183ccd994
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - stac-client=pystac_client.cli:cli
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - requests >=2.28.2
     - pystac >=1.10.0
     - python-dateutil >=2.8.2
@@ -36,6 +37,7 @@ test:
     - stac-client --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/stac-utils/pystac-client.git
