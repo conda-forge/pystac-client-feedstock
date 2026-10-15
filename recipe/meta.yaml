@@ -12,7 +12,7 @@ source:
   sha256: 3908951583bcc6a3aaaf2828024a8e03764e6ca9d9f9f1d8149df587e14dd744
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - stac-client=pystac_client.cli:cli
@@ -25,8 +25,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - jsonschema
     - requests >=2.28.2
-    - pystac >=1.10.0
+    - pystac >=1.10.0  # pystac[validation]
     - python-dateutil >=2.8.2
 
 test:
